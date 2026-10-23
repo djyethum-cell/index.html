@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b0b0f">
+<title>YETHUM SENSI PRO | Free Fire Sensitivity Generator</title>
+<meta name="description" content="Generate Free Fire sensitivity and DPI starting points for your phone and play style.">
+<style>
+:root{--bg:#09090d;--panel:#14141b;--panel2:#1c1c25;--red:#ff3348;--gold:#ffcc66;--text:#f7f7fb;--muted:#aaaab8;--line:#30303b}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#251016 0,#09090d 52%);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.5}
+.wrap{width:min(100% - 28px,960px);margin:auto}.top{padding:28px 0 18px;text-align:center}.logo{display:inline-flex;align-items:center;gap:8px;font-weight:900;letter-spacing:1.4px;font-size:clamp(20px,5vw,30px)}.mark{background:linear-gradient(135deg,var(--red),#a50018);color:white;padding:5px 9px;border-radius:8px;box-shadow:0 0 25px #ff334833}.tag{color:var(--gold);font-size:12px;letter-spacing:2px;font-weight:800;margin-top:8px}.intro{color:var(--muted);max-width:620px;margin:10px auto 0;font-size:14px}
+main{padding-bottom:35px}.card{background:linear-gradient(145deg,#17171f,#111116);border:1px solid var(--line);border-radius:18px;padding:20px;margin:14px 0;box-shadow:0 15px 45px #0005}.card h2{margin:0 0 14px;font-size:17px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field label{display:block;font-size:12px;color:var(--muted);font-weight:700;margin-bottom:6px}.field select,.field input{width:100%;padding:12px;background:#0d0d12;border:1px solid #393944;border-radius:10px;color:var(--text);font:inherit;outline:none}.field select:focus,.field input:focus{border-color:var(--red)}.full{grid-column:1/-1}.btn{border:0;border-radius:12px;background:linear-gradient(100deg,#ff3348,#c80d28);color:#fff;font-weight:900;font-size:15px;padding:14px 18px;width:100%;margin-top:16px;cursor:pointer;box-shadow:0 8px 22px #ff334826}.btn:active{transform:scale(.99)}.hint{font-size:12px;color:var(--muted);margin:12px 0 0}.results{display:none}.results.show{display:block}.resulthead{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.chip{border:1px solid #66414a;color:var(--gold);background:#25141a;border-radius:999px;padding:5px 10px;font-size:11px;font-weight:800}.values{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}.value{background:#0b0b10;border:1px solid #2e2e38;border-radius:12px;padding:12px;text-align:center}.value span{display:block;font-size:11px;color:var(--muted);margin-bottom:5px}.value strong{font-size:25px;letter-spacing:.5px}.value small{display:block;color:var(--gold);font-size:10px;margin-top:2px}.dpi{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:15px;background:#0b0b10;border:1px solid #2e2e38;border-radius:12px;margin-top:12px}.dpi strong{font-size:24px;color:var(--gold)}.dpi p{margin:0;color:var(--muted);font-size:12px}.secondary{background:#25252f;border:1px solid #41414d;border-radius:10px;color:white;padding:10px 13px;font-weight:800;cursor:pointer}.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.note{font-size:12px;color:var(--muted);margin-top:12px}.notice{border-left:3px solid var(--gold);padding:10px 12px;background:#211b12;color:#e9d8b6;border-radius:0 9px 9px 0;font-size:12px;margin-top:14px}.footer{text-align:center;color:#858591;font-size:12px;padding:10px 0 30px}.footer b{color:#ddd}.hidden{display:none!important}
+@media(max-width:520px){.wrap{width:min(100% - 20px,960px)}.card{padding:15px;border-radius:15px}.grid{grid-template-columns:1fr}.values{grid-template-columns:repeat(2,1fr)}.value strong{font-size:23px}.full{grid-column:auto}.top{padding-top:22px}.dpi{align-items:flex-start;flex-direction:column}.actions{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<header class="top wrap">
+  <div class="logo"><span class="mark">YS</span><span>YETHUM <span style="color:var(--red)">SENSI</span> PRO</span></div>
+  <div class="tag">FREE FIRE • SENSITIVITY LAB</div>
+  <p class="intro">Build a personal sensitivity starting point for your phone and play style. Test it in Training Ground and fine-tune for your touch response.</p>
+</header>
+<main class="wrap">
+<section class="card">
+  <h2>⚙️ Configure your setup</h2>
+  <div class="grid">
+    <div class="field"><label for="phone">PHONE BRAND</label><select id="phone"><option value="huawei">Huawei</option><option value="samsung">Samsung</option><option value="redmi">Xiaomi / Redmi / POCO</option><option value="realme">Realme / OPPO / OnePlus</option><option value="vivo">Vivo / iQOO</option><option value="iphone">iPhone</option><option value="other" selected>Other Android</option></select></div>
+    <div class="field"><label for="ram">RAM</label><select id="ram"><option value="2">2 GB or less</option><option value="3">3 GB</option><option value="4" selected>4 GB</option><option value="6">6 GB</option><option value="8">8 GB</option><option value="12">12 GB or more</option></select></div>
+    <div class="field"><label for="style">PLAY STYLE</label><select id="style"><option value="headshot">Headshot / drag</option><option value="rush">Rush / close range</option><option value="control">Control / low recoil</option><option value="balanced" selected>Balanced</option></select></div>
+    <div class="field"><label for="touch">TOUCH RESPONSE</label><select id="touch"><option value="slow">Feels slow</option><option value="normal" selected>Normal</option><option value="high">Very sensitive / over-aims</option></select></div>
+    <div class="field"><label for="current">CURRENT GENERAL (OPTIONAL)</label><input id="current" type="number" min="0" max="200" placeholder="e.g. 40"></div>
+    <div class="field"><label for="dpiMode">DPI PREFERENCE</label><select id="dpiMode"><option value="safe" selected>Keep default / safest</option><option value="suggest">Show optional DPI idea</option></select></div>
+  </div>
+  <button class="btn" id="generate">GENERATE MY SETTINGS</button>
+  <p class="hint">These are starting-point recommendations, not official settings. Free Fire sensitivity scales and device touch response can differ by version and phone.</p>
+</section>
+<section class="card results" id="results" aria-live="polite">
+  <div class="resulthead"><h2 style="margin:0">🎯 Your sensitivity setup</h2><span class="chip" id="profile">BALANCED PROFILE</span></div>
+  <div class="values" id="values"></div>
+  <div class="dpi hidden" id="dpiBox"><div><p>OPTIONAL ANDROID DPI IDEA</p><strong id="dpiValue">400</strong><p>Only change if you understand Developer Options. This is not required for good aim.</p></div><button class="secondary" id="copyDpi">Copy DPI</button></div>
+  <div class="actions"><button class="secondary" id="copyAll">📋 Copy all settings</button><button class="secondary" id="regenerate">↻ Generate again</button></div>
+  <div class="notice">Tip: change only one setting at a time. If your aim goes over the head, lower General or Red Dot by 3–5 points; if your drag feels slow, raise it by 3–5 and retest.</div>
+  <p class="note">To test: enter Training Ground, use your usual weapon, practise short upward drags, and keep the setup that feels consistent.</p>
+</section>
+<section class="card">
+  <h2>💡 Quick tuning guide</h2>
+  <p class="hint" style="font-size:13px;margin:0">• Aim passes above the head: reduce General / Red Dot slightly.<br>• Aim stops at the chest: increase General / Red Dot slightly.<br>• Scope aim shakes: lower the matching scope setting.<br>• Screen itself misses or delays touches: clean and dry the screen, remove a damaged protector, and check for touch-screen issues before changing sensitivity.</p>
+</section>
+</main>
+<footer class="footer wrap">Made for the <b>YETHUM SENSI PRO</b> community.<br>Fan-made tool; not affiliated with or endorsed by Garena or Free Fire.</footer>
+<script>
+(function(){
+const $=id=>document.getElementById(id);
+const clamp=(n,min,max)=>Math.max(min,Math.min(max,n));
+function makeSettings(){
+ const style=$('style').value, touch=$('touch').value, ram=Number($('ram').value), phone=$('phone').value;
+ const current=Number($('current').value);
+ let base={General:150,'Red Dot':135,'2x Scope':125,'4x Scope':110,'Sniper Scope':75,'Free Look':120};
+ if(style==='headshot') base={General:180,'Red Dot':165,'2x Scope':145,'4x Scope':125,'Sniper Scope':80,'Free Look':130};
+ if(style==='rush') base={General:175,'Red Dot':155,'2x Scope':140,'4x Scope':120,'Sniper Scope':75,'Free Look':125};
+ if(style==='control') base={General:135,'Red Dot':120,'2x Scope':110,'4x Scope':95,'Sniper Scope':65,'Free Look':110};
+ if(touch==='slow') Object.keys(base).forEach(k=>base[k]+=8);
+ if(touch==='high') Object.keys(base).forEach(k=>base[k]-=15);
+ if(ram<=3){base['4x Scope']-=4;base['Sniper Scope']-=5}
+ if(phone==='iphone'){base['Free Look']+=3}
+ if(Number.isFinite(current)&&current>=0&&current<=200&&$('current').value.trim()!==''){
+   const delta=current-base.General; // use user's current General as anchor, preserve profile relationships
+   Object.keys(base).forEach(k=>base[k]+=delta);
+ }
+ Object.keys(base).forEach(k=>base[k]=clamp(Math.round(base[k]),0,200));
+ return base;
+}
+function render(){
+ const settings=makeSettings();
+ $('values').innerHTML=Object.entries(settings).map(([k,v])=>`<div class="value"><span>${k.toUpperCase()}</span><strong>${v}</strong><small>/ 200</small></div>`).join('');
+ const labels={headshot:'HEADSHOT / DRAG',rush:'RUSH / CLOSE RANGE',control:'CONTROL / LOW RECOIL',balanced:'BALANCED PROFILE'};
+ $('profile').textContent=labels[$('style').value];
+ const showDpi=$('dpiMode').value==='suggest'&&$('phone').value!=='iphone';
+ $('dpiBox').classList.toggle('hidden',!showDpi);
+ const dpiBase=({huawei:400,samsung:420,redmi:430,realme:420,vivo:410,other:400})[$('phone').value]||400;
+ const dpiRam=Number($('ram').value)<=3?-20:Number($('ram').value)>=8?20:0;
+ const dpiTouch=$('touch').value==='high'?-25:$('touch').value==='slow'?15:0;
+ $('dpiValue').textContent=clamp(dpiBase+dpiRam+dpiTouch,320,480);
+ $('results').classList.add('show');
+ $('results').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function textToCopy(){return 'YETHUM SENSI PRO\\nFree Fire sensitivity starting points\\nPhone: '+$('phone').selectedOptions[0].text+' | RAM: '+$('ram').selectedOptions[0].text+' | Style: '+$('style').selectedOptions[0].text+'\\n'+[...$('values').querySelectorAll('.value')].map(el=>el.querySelector('span').textContent+': '+el.querySelector('strong').textContent).join('\\n')+($('dpiBox').classList.contains('hidden')?'':'\\nOptional DPI idea: '+$('dpiValue').textContent)+'\\nTest and adjust to your device.';
+}
+async function copy(text,btn,original){
+ try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(text)}else{const t=document.createElement('textarea');t.value=text;t.style.position='fixed';t.style.opacity='0';document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}btn.textContent='✓ Copied';setTimeout(()=>btn.textContent=original,1400)}catch(e){window.prompt('Copy your settings:',text)}
+}
+$('generate').addEventListener('click',render);
+$('regenerate').addEventListener('click',render);
+$('copyAll').addEventListener('click',function(){copy(textToCopy(),this,'📋 Copy all settings')});
+$('copyDpi').addEventListener('click',function(){copy('Optional DPI idea: '+$('dpiValue').textContent,this,'Copy DPI')});
+})();
+</script>
+</body>
+</html>
